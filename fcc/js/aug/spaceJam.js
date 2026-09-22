@@ -21,7 +21,7 @@ function spaceJam(s) {
   }
   let jam = "";
   for (let i = 0; i < jamArray.length; i++) {
-    jam = jam + jamArray[i];
+    jam += jamArray[i];
   }
   return jam;
 }
