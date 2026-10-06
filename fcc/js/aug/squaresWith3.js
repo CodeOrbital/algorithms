@@ -1,4 +1,4 @@
-function squaresWithThree(n) {
+/*function squaresWithThree(n) {
   let count = 0;
   for (let nth = 1; nth <= n; nth++) {
     const str = String(nth * nth);
@@ -7,6 +7,20 @@ function squaresWithThree(n) {
       if (str[i] == 3) {
         count++;
         gotten = true;
+      }
+    }
+  }
+  return count;
+}
+*/
+function squaresWithThree(n) {
+  let count = 0;
+  for (let nth = 1; nth <= n; nth++) {
+    const str = String(nth * nth);
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === "3") {
+        count++;
+        break;
       }
     }
   }
