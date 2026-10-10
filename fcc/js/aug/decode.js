@@ -28,6 +28,7 @@ function decode(message, shift) {
     "z",
   ];
   const charMap = new Map(alpha.map((letter, index) => [index, letter]));
+  const indexesMap = new Map(alpha.map((letter, index) => [letter, index]));
   const capitals = /[A-Z]/;
   const alphabet = /[A-Za-z]/;
   let uppersPlace = [];
@@ -39,7 +40,7 @@ function decode(message, shift) {
   });
   let dArray = mArray.map((char) => {
     if (alphabet.test(char)) {
-      const targetIndex = alpha.indexOf(char.toLowerCase()) - shift;
+      const targetIndex = indexesMap.get(char.toLowerCase()) - shift;
       return charMap.get(
         targetIndex > 25
           ? targetIndex - 26
