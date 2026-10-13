@@ -32,16 +32,17 @@ string reverse_words(const string &str)
 		{
 			migrator.push_back(text[n]);
 		}
-		if (text[n] == ' ' || n == l-1)
+		if (text[n] == ' ' || n == l - 1)
 		{
 			order[spCount] = migrator;
 			spCount--;
 			migrator.erase();
 		}
 	}
-	text="";
-	for(int i=0; i<(total+1);i++){
-		string word = i < total ? order[i] + string(1,' ') : order[i];
+	text = "";
+	for (int i = 0; i < (total + 1); i++)
+	{
+		string word = i < total ? order[i] + string(1, ' ') : order[i];
 		text.append(word);
 	}
 	return text;
@@ -50,7 +51,7 @@ string reverse_words(const string &str)
 int main()
 {
 	string txt;
-	txt = "Mr. Abraham Smith Johnson";
+	txt = "Mr. Amanuel Nega Abate";
 	cout << reverse_words(txt);
 
 	return 0;
