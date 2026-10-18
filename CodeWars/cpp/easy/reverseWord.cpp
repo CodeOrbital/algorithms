@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-string reverse_words(const string &str)
+string reverse_word(const string &str)
 {
 	string text = str;
 	string migrator = "";
@@ -52,7 +52,7 @@ int main()
 {
 	string txt;
 	txt = "Mr. Amanuel Nega Abate";
-	cout << reverse_words(txt);
+	cout << reverse_word(txt);
 
 	return 0;
 }
